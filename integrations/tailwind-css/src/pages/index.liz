@@ -1,0 +1,44 @@
+import { Counter } from "@/components/Counter.liz";
+
+@default
+<HomePage>
+  <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,#0e7490_0,#020617_34rem)] px-6 py-10">
+    <section className="mx-auto grid w-full max-w-5xl gap-8">
+      <header className="grid gap-4">
+        <p className="text-sm font-black uppercase tracking-wider text-cyan-200">Integration example</p>
+        <h1 className="max-w-3xl text-4xl font-black leading-tight text-white sm:text-6xl">
+          Elizabeth with Tailwind CSS
+        </h1>
+        <p className="max-w-2xl text-lg leading-8 text-slate-300">
+          This page is styled by Tailwind utilities from <code className="rounded bg-slate-900 px-1.5 py-0.5 text-cyan-200">src/styles.css</code> and compiled through the Vite Tailwind plugin.
+        </p>
+      </header>
+
+      <section className="grid gap-4 rounded-lg border border-slate-800 bg-slate-950/80 p-5 shadow-2xl shadow-cyan-950/30 backdrop-blur sm:grid-cols-[1fr_auto] sm:items-center">
+        <div className="grid gap-2">
+          <h2 className="text-xl font-black text-white">Client island</h2>
+          <p className="text-sm leading-6 text-slate-400">
+            The counter keeps Elizabeth client state while Tailwind handles the visual system.
+          </p>
+        </div>
+        <Counter />
+      </section>
+
+      <section className="grid gap-3 sm:grid-cols-3">
+        <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-4">
+          <strong className="text-cyan-200">Global CSS</strong>
+          <p className="mt-2 text-sm leading-6 text-slate-400">Tailwind is imported from <code>src/styles.css</code>.</p>
+        </div>
+        <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-4">
+          <strong className="text-cyan-200">Vite plugin</strong>
+          <p className="mt-2 text-sm leading-6 text-slate-400"><code>@tailwindcss/vite</code> runs from <code>vite.config.ts</code>.</p>
+        </div>
+        <div className="rounded-lg border border-slate-800 bg-slate-900/70 p-4">
+          <strong className="text-cyan-200">Alias imports</strong>
+          <p className="mt-2 text-sm leading-6 text-slate-400">The page imports the island through <code>@/components/Counter.liz</code>.</p>
+        </div>
+      </section>
+    </section>
+  </main>
+</HomePage>
+

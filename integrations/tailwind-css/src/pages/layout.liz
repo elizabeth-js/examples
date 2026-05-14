@@ -1,0 +1,12 @@
+@default
+<RootLayout>
+  <html>
+    <head>
+      <title>Elizabeth Tailwind CSS Integration</title>
+    </head>
+    <body>
+      {children}
+    </body>
+  </html>
+</RootLayout>
+
