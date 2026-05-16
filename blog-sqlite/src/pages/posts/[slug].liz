@@ -1,5 +1,6 @@
-import { getPost } from "@/db.ts";
+import { getPost } from "@/db";
 import { notFound } from "elizabeth/route";
+
 
 @default
 <PostPage>

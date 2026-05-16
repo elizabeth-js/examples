@@ -9,7 +9,7 @@
     "start": "bun dist/server.js"
   },
   "dependencies": {
-    "elizabeth": "file:../.."
+    "elizabeth": "npm:@elizabeth-js/elizabeth@latest"
   },
   "devDependencies": {
     "typescript": "^6.0.3",

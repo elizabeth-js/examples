@@ -62,6 +62,21 @@ export function createPost(input: { title: string; excerpt: string; body: string
   return post;
 }
 
+export function deletePost(input: { title: string }) {
+  const title = input.title.trim();
+  const slugBase = slugify(title);
+  const slug = uniqueSlug(slugBase);
+
+  db.query("delete from posts where title = ?").run(title);
+
+  const post = getPost(slug);
+  if (post) {
+    throw new Error("Post was not deleted.");
+  }
+
+  return "oke";
+}
+
 function uniqueSlug(base: string): string {
   let slug = base || "post";
   let index = 2;
