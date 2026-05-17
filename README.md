@@ -30,9 +30,17 @@ Most examples depend on the published `@elizabeth-js/elizabeth` package through 
 | `inter-component-state` | A client island composed of smaller components sharing state through props and event handlers. |
 | `nested-dynamic-routes` | Nested dynamic page routes and API routes, including multiple configured route roots. |
 | `nested-state-app` | Nested layouts, dynamic params, shared app data, and a deeper page tree. |
+| `auth` | Signup / login / logout flow with HMAC-signed cookie sessions, scrypt password hashing, and a client island that checks session state on hydration. |
 | `integrations/tailwind-css` | Tailwind CSS v4 through `@tailwindcss/vite` and Elizabeth global styles. |
 
 ## Useful Routes
+
+### `auth`
+
+- `/` shows a landing page with auth status (checked client-side via `/api/auth/me`).
+- `/login` and `/signup` render form pages.
+- `POST /api/auth/login`, `POST /api/auth/signup`, `POST /api/auth/logout` handle the auth flow.
+- Copy `.env.example` to `.env` and set `SESSION_SECRET` before starting.
 
 ### `blog-sqlite`
 

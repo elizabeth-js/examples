@@ -1,5 +1,5 @@
 import { redirect } from "elizabeth/route";
-import { createPost, deletePost } from "@/db.ts";
+import { createPost, deletePost } from "@/db";
 
 export async function POST(ctx: { request: Request }) {
   const form = await ctx.request.formData();
